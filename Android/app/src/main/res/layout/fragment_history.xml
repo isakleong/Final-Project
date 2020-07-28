@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HistoryFragment"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/tabHistoryPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/txtNotProcess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Not Processed"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:drawablePadding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/txtInProcess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="In Process"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:drawablePadding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/txtCompleted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Completed"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:drawablePadding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tabHistoryPage"
+            android:gravity="center"
+            >
+<!--            <include layout="@layout/custom_progress_bar"/>-->
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/spin_kit_history"
+                style="@style/SpinKitView.Large.ThreeBounce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:SpinKit_Color="#01AB6D"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tabHistoryPage"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txtOops"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tabHistoryPage"
+                android:layout_centerHorizontal="true"
+                android:textSize="20dp"
+                android:text="Hai Petranesian!"
+                android:textStyle="bold"
+                android:textColor="#9e9e9e"
+                android:textAlignment="center"
+                android:visibility="invisible"
+                android:fontFamily="@font/roboto_medium"/>
+
+            <ImageView
+                android:id="@+id/imgView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/txtOops">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/txtKet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_below="@id/imgView"
+                android:textSize="15dp"
+                android:textColor="#9e9e9e"
+                android:text="Riwayat aspirasi masih kosong\nYuk, segera suarakan aspirasimu\nuntuk UK Petra yang lebih baik lagi"
+                android:textAlignment="center"
+                android:visibility="invisible"
+                android:fontFamily="@font/roboto_regular"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

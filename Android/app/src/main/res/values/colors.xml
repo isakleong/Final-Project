@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="blue">#0000FF</color>
+    <color name="solidCircle">#80FFFFFF</color>
+    <color name="cirlcleBorder">#30FFFFFF</color>
+    <color name="textBiru">#5B66FF</color>
+    <color name="gradient">@drawable/backgroundcolorgradient</color>
+    <color name="textLightBlue">#646EFF</color>
+    <color name="notification">#01AB6D</color>
+
+</resources>

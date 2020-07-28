@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundsignin"
+    tools:context=".SignIn">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logopetra"
+        android:layout_marginTop="65dp"/>
+
+    <LinearLayout
+        android:id="@+id/linearSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgLogo"
+        android:background="@color/solidCircle"
+        android:orientation="vertical"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="95dp"
+        android:layout_centerHorizontal="true"
+        >
+
+        <EditText
+            android:id="@+id/email_signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:alpha="0.5"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:hint="E-mail"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:id="@+id/password_signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="30dp"
+            android:ems="10"
+            android:alpha="0.5"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:layout_marginTop="25dp"
+            />
+
+        <RadioGroup
+            android:id="@+id/userClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="30dp"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <RadioButton android:id="@+id/radio_student"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/radio_biro_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Biro / Unit"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+<!--    <EditText-->
+<!--        android:id="@+id/email_signin"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/imgLogo"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginLeft="25dp"-->
+<!--        android:layout_marginRight="25dp"-->
+<!--        android:layout_marginTop="105dp"-->
+<!--        android:background="@drawable/textbox"-->
+<!--        android:ems="10"-->
+<!--        android:alpha="0.5"-->
+<!--        android:textSize="16sp"-->
+<!--        android:fontFamily="@font/roboto_medium"-->
+<!--        android:hint="E-mail"-->
+<!--        android:inputType="text"-->
+<!--        android:textColor="#000000"-->
+<!--        android:textAlignment="center"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/password_signin"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/email_signin"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:background="@drawable/textbox"-->
+<!--        android:layout_marginLeft="25dp"-->
+<!--        android:layout_marginRight="25dp"-->
+<!--        android:ems="10"-->
+<!--        android:alpha="0.5"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textColor="#000000"-->
+<!--        android:fontFamily="@font/roboto_medium"-->
+<!--        android:hint="Password"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:textAlignment="center"-->
+<!--        android:layout_marginTop="15dp" />-->
+
+    <Button
+        android:id="@+id/button_signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearSignIn"
+        android:layout_marginLeft="13.5dp"
+        android:layout_marginRight="13.5dp"
+        android:background="@drawable/buttonlarge"
+        android:text="LOGIN"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_medium"
+        android:textAllCaps="false"
+        android:textColor="@color/zxing_result_view"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="55dp"/>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/lupapassword"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/password_signin"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:clickable="true"-->
+<!--            android:fontFamily="@font/roboto_light"-->
+<!--            android:text="Lupa kata sandi? "-->
+<!--            android:textSize="16sp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="#ffffff"-->
+<!--            android:layout_marginTop="18dp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/klikForget"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/password_signin"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:clickable="true"-->
+<!--            android:fontFamily="@font/roboto_medium"-->
+<!--            android:textSize="16sp"-->
+<!--            android:text="Klik di sini"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="#ffffff"-->
+<!--            android:layout_marginTop="18dp" />-->
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_below="@+id/button_signin"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="5dp">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/belumpunya"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:clickable="true"-->
+<!--            android:fontFamily="@font/roboto_light"-->
+<!--            android:textSize="16sp"-->
+<!--            android:text="Belum punya akun? "-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="#ffffff" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtDaftar"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Daftar di sini"-->
+<!--            android:fontFamily="@font/roboto_medium"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textColor="#ffffff"/>-->
+
+<!--    </LinearLayout>-->
+
+</RelativeLayout>

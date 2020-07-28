@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android_skripsi">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/unnamed"
+        android:label="Skripsi"
+        android:roundIcon="@drawable/unnamed"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Main2Activity"
+            >
+
+        </activity>
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/SplashScreenStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DetailTrending"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".DetailBiroUnit"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".RateResolusi"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".InsertResolusiAspirasi"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".EditAspirasi"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".DetailHistory"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".GlobalActivity"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".InputAspirasi"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".SignIn"
+            android:screenOrientation="userPortrait" />
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/unnamed" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/notification" /> <!-- FCM: Disable auto-init -->
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id"/>
+
+    </application>
+
+</manifest>

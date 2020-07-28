@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/backgroundhistory">
+
+            <RelativeLayout
+                android:id="@+id/profile_layout"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="150dp">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvProfile"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/buttonshaperadiusprofile"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgProfilePicture"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/buttonprofile"
+                        />
+
+                </android.support.v7.widget.CardView>
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/imgEdit"-->
+<!--                    android:layout_width="20dp"-->
+<!--                    android:layout_height="20dp"-->
+<!--                    android:layout_toEndOf="@id/txtFullName"-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:layout_marginTop="1dp"-->
+<!--                    android:background="@drawable/buttonshaperadiusdokumen"-->
+<!--                    android:src="@drawable/iconedit">-->
+<!--                </ImageView>-->
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardDataProfile"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/profile_layout"
+                app:cardCornerRadius="15dp"
+                android:elevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/headerNamaLengkap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Lengkap"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:padding="5dp"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:id="@+id/txtNamaLengkap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/headerNamaLengkap"
+                        android:text="Content nama lengkap"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:padding="5dp"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:id="@+id/headerNRP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtNamaLengkap"
+                        android:layout_marginTop="15dp"
+                        android:text="NRP"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:padding="5dp"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:id="@+id/txtNRP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/headerNRP"
+                        android:text="Content NRP"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:padding="5dp"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:id="@+id/headerTglLahir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtNRP"
+                        android:layout_marginTop="15dp"
+                        android:text="TTL"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:padding="5dp"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:id="@+id/txtTglLahir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/headerTglLahir"
+                        android:text="Content TTL"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:padding="5dp"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:id="@+id/headerAlamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtTglLahir"
+                        android:layout_marginTop="15dp"
+                        android:text="Alamat"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:padding="5dp"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:id="@+id/txtAlamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/headerAlamat"
+                        android:text="Content Alamat"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:padding="5dp"
+                        android:textAlignment="center"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardLogout"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/cardDataProfile"
+                app:cardBackgroundColor="#01b68d"
+                app:cardCornerRadius="10dp"
+                android:elevation="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:layout_margin="15dp">
+
+                    <TextView
+                        android:id="@+id/txtLogout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textAlignment="center"
+                        android:text="Logout"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
